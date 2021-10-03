@@ -1,0 +1,69 @@
+<div class="free-contents">
+    <div class="return m-4">
+        <a class="text-decoration-none link-warning border border-3 rounded-pill px-3 py-1" href="/homepage">Return</a>
+    </div>
+    <div class="title-logo">
+        <div class="free-logo">
+            <img src="" alt="">
+        </div>
+        <div class="free-title">
+            <h3 class="">{{titleLogo}}</h3>
+        </div>
+        <div class="the-table">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">{{booktile.bisbn}}</th>
+                        <th scope="col">{{booktile.bname}}</th>
+                        <th scope="col">{{booktile.bauthor}}</th>
+                        <th scope="col">{{booktile.bpublisher}}</th>
+                        <th scope="col">{{booktile.bdate}}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">{{#each books}}
+                            <li class="lista" style="list-style-type: none;">{{this.isbn}}</li>
+                            {{/each}}
+                        </th>
+                        <td>{{#each books}}
+                            <li class="lista" style="list-style-type: none;">{{this.bookName}}</li>
+                            {{/each}}
+                        </td>
+                        <td>{{#each books}}
+                            <li class="lista" style="list-style-type: none;">{{this.author}}</li>
+                            {{/each}}
+                        </td>
+                        <td>{{#each books}}
+                            <li class="lista" style="list-style-type: none;">{{this.publisher}}</li>
+                            {{/each}}
+                        </td>
+                        <td>{{#each books}}
+                            <li class="lista" style="list-style-type: none;">{{this.datePublish}}</li>
+                            {{/each}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="view-json">
+            <button type="button" class="btn btn-danger m-3" id="viewJson">View raw JSON file</button>
+        </div>
+        <div class="learn bg-warning py-2 rounded-pill fw-bold text-center">
+            <samp>{{learn}}</samp>
+        </div>
+    </div>
+</div>
+
+{{!-- CUSTOM JAVASCRIPT --}}
+<script>
+    document.getElementById('viewJson').addEventListener('click', viewJ)
+
+    function viewJ() {
+        window.open("/routes", "_blank",
+            "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=500,height=650");
+    }
+
+</script>

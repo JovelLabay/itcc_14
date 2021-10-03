@@ -1,0 +1,128 @@
+<div class="prem-contents">
+    <div class="return m-4">
+        <a class="text-decoration-none link-warning border border-3 rounded-pill px-3 py-1" href="/homepage">Logout</a>
+    </div>
+    <div class="prem-title-logo my-5 text-center">
+        <h4 class="">{{titleLogo}}</h4>
+    </div>
+    <div class="the-prem-main-contents">
+        <div class="guide border-5 bg-secondary rounded mx-5 overflow-auto px-5 py-3" style="height: 350px;">
+            <div class="instructions">
+                <h3>{{titleLogo}}</h3>
+            </div>
+            <div class="details">
+                <ul>
+                    <li>This account has all the accesibility</li>
+                    <li>CREATE</li>
+                    <li>READ</li>
+                    <li>UPDATE</li>
+                    <li>DELETE</li>
+                    <li>Before you can direct in this page the homepage requires you to pass a password firt</li>
+                    <li>Sample text</li>
+                    <li>Hidden text</li>
+                    <li>Displayed text</li>
+                    <li>Displayed text</li>
+                    <li>Displayed text</li>
+                </ul>
+            </div>
+            <div class="learning text-center">
+                <samp class="bg-warning rounded py-2 px-5">{{learn}}</samp>
+            </div>
+        </div>
+        <div class="optionation my-5 mx-5">
+            <div class="row gx-3">
+                <div class="col-md-3" style="cursor: pointer;">
+                    <div class="p-3 border bg-primary text-center link-dark">
+                        <h6 id="opener">CREATE</h6>
+                    </div>
+                </div>
+                <div class="col-md-3" style="cursor: pointer;">
+                    <div class="p-3 border bg-info text-center">
+                        <h6 id="opener2">SEARCH BOOK</h6>
+                    </div>
+                </div>
+                <div class="col-md-3" style="cursor: pointer;">
+                    <div class="p-3 border bg-danger text-center">
+                        <h6 onclick="deletion()">DELETE BOOK</h6>
+                    </div>
+                </div>
+                <div class="col-md-3" style="cursor: pointer;">
+                    <div class="p-3 border bg-success text-center">
+                        <h6 id="videJ2">VIEW JSON</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="dialog" title="CREATE">
+    <form action="/routes" method="POST" class="mb-4">
+        <div class="form-group">
+            <label for="bookName" class="book">Book Name</label>
+            <input type="text" name="bookName" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="publisher">Publisher</label>
+            <input type="text" name="publisher" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="publisher">Author</label>
+            <input type="text" name="author" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="isbn">Book ISBN</label>
+            <input required type="number" name="isbn" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label for="datePublisher">Book Published</label>
+            <input type="text" name="datePublish" class="form-control" />
+        </div>
+        <div class="text-center">
+            <input class="btn btn-primary m-2 " type="submit" value="Add Book" />
+        </div>
+    </form>
+</div>
+
+<div id="dialog2" title="SEARCH BOOK" class="text-center">
+
+    <input id="numbering" type="number" placeholder="ISBN | 1-99 DIGITS" class="my-2">
+    <button onclick="hello()" class="btn btn-primary my-2">Search</button>
+
+
+</div>
+
+<script>
+    $("#dialog").dialog({
+        autoOpen: false
+    });
+    $("#opener").click(function () {
+        $("#dialog").dialog("open");
+    });
+
+    document.getElementById('videJ2').addEventListener('click', viewJ2)
+
+    function viewJ2() {
+        window.open("/routes", "_blank",
+            "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=500,height=650");
+    }
+
+    $("#dialog2").dialog({
+        autoOpen: false
+    });
+    $("#opener2").click(function () {
+        $("#dialog2").dialog("open");
+    });
+
+    function hello() {
+        let n = document.getElementById('numbering').value
+        window.open(`/routes/${n}`, "_blank",
+            "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=500,height=650");
+    }
+    function deletion() {
+        let n = document.getElementById('numbering').value
+        window.open('https://web.postman.co/workspace/My-Workspace~f99c63f1-b0d3-4d4a-85ba-7550e2db153b', "_blank",
+            "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=100,width=1300,height=650");
+    }
+
+</script>

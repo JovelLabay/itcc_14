@@ -1,0 +1,44 @@
+<div class="the-contents">
+    <div class="title-logo text-center my-5">
+        <div class="title">
+            <h3 id="title">{{title}}</h3>
+        </div>
+    </div>
+    <div class="the-content">
+        <div class="row gx-5 bg-warning rounded my-5 py-5">
+            <div class="col">
+                <div class="p-4 bg-dark rounded-pill text-center">
+                    <a class="text-decoration-none text-light" href="/freepage" rel="noopener noreferrer">
+                        <h5>Go <span class="bg-warning p-2 px-4 rounded-pill">Public</span></h5>
+                    </a>
+                </div>
+            </div>
+            <div class="col">
+                <div class="p-4 bg-dark rounded-pill text-center">
+                    <a id="paid" class="text-decoration-none text-light" rel="noopener noreferrer"
+                        style="cursor: pointer;">
+                        <h5>Go <span class="bg-warning p-2 px-4 rounded-pill">Premium</span></h5>
+                    </a>
+                    <a id="goNow" href="/prempage" rel="noopener noreferrer" style="display: none;">Go Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{!-- CUSTOME JAVASCRIPT --}}
+<script>
+    document.getElementById('paid').addEventListener('click', payme)
+
+    function payme() {
+        const password = 'itcc_14'
+        const inputPassword = prompt('What is your personal key: ')
+        if (password != inputPassword) {
+            alert('Incorrect Password')
+        } else {
+            alert('Correct password')
+            document.getElementById('goNow').style.display = 'block'
+        }
+    }
+
+</script>
