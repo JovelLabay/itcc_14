@@ -85,11 +85,8 @@
 </div>
 
 <div id="dialog2" title="SEARCH BOOK" class="text-center">
-
     <input id="numbering" type="number" placeholder="ISBN | 1-99 DIGITS" class="my-2">
     <button onclick="hello()" class="btn btn-primary my-2">Search</button>
-
-
 </div>
 
 <script>
@@ -119,6 +116,7 @@
         window.open(`/routes/${n}`, "_blank",
             "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=500,height=650");
     }
+
     function deletion() {
         let n = document.getElementById('numbering').value
         window.open('https://web.postman.co/workspace/My-Workspace~f99c63f1-b0d3-4d4a-85ba-7550e2db153b', "_blank",
