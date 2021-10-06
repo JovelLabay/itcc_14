@@ -91,7 +91,15 @@
 
 <script>
     $("#dialog").dialog({
-        autoOpen: false
+        autoOpen: false,
+        show: {
+            effect: "explode",
+            duration: 1000
+        },
+        hide: {
+            effect: "explode",
+            duration: 1000
+        }
     });
     $("#opener").click(function () {
         $("#dialog").dialog("open");
@@ -105,7 +113,15 @@
     }
 
     $("#dialog2").dialog({
-        autoOpen: false
+        autoOpen: false,
+        show: {
+            effect: "bounce",
+            duration: 1000
+        },
+        hide: {
+            effect: "bounce",
+            duration: 1000
+        }
     });
     $("#opener2").click(function () {
         $("#dialog2").dialog("open");

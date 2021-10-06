@@ -37,7 +37,7 @@
             alert('Incorrect Password')
         } else {
             alert('Correct password')
-            document.getElementById('goNow').style.display = 'block'
+            $('#goNow').slideDown('slow', function() {})
         }
     }
 
