@@ -9,6 +9,7 @@
 
 ### TO RUN THE SERVER
 
+- You do not have to initalize the package because it is already there.
 - `npm run **server.js**`
 
 ### I SUGGEST DO NOT USE THE REST CLIENT EXTENSION IN THE VS CODE
