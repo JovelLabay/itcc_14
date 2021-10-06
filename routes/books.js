@@ -53,6 +53,7 @@ router.put('/:id', (req, res) => {
                 books.bookName = updatedBooks.bookName ? updatedBooks.bookName : books.bookName;
                 books.publisher = updatedBooks.publisher ? updatedBooks.publisher : books.publisher;
                 res.send('BOOK DETAILS HAS BEEN UPDATED')
+                res.send(updatedBooks)
             }
         });
     } else {

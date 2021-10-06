@@ -1,17 +1,31 @@
+# TO REQUEST AND MAKE RESPONSE TO THE FILE
 GET http://localhost:3000/routes
 
 ###
 
-GET http://localhost:3000/routes/1
+# TO REQUEST ONLY THE SPECIFIC FILE
+GET http://localhost:3000/routes/:id
 
 ###
 
-POST  http://localhost:3000/routes
+# TO EDIT THE SPECIFIC FILE
+PUT http://localhost:3000/routes/1
 
 {
-        "bookName": "The Sampdfgle Bdfgdfgook",
-        "author": "Jfgdfuan Ludfgdna",
-        "publisher": "Xavgdfgdier Univfgdfersity",
-        "isbn": 11113,
-        "datePublish": "Fefghfghb. 15673, 196767686"    
+    "bookname":"book sample edited 1",
+    "publisher":"pubisher sample edited 1"
 }
+
+###
+
+# TO POST ON THE EXISTING FILE
+POST http://localhost:3000/routes
+
+{
+    "bookName": " ",
+    "author": " ",
+    "publisher": " ",
+    "isbn": ,
+    "datePublish": " "
+}
+
