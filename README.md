@@ -19,6 +19,6 @@
 ### I SUGGEST ALSO TO USE JSON PARSE THAT FORMATS THE JSON FILE
 
 - Preferred browser to use are browsers that uses V8 javascript engine:
-- Download this extension [JSON VIWER](https://chrome.google.com/webstore/detail/djson-json-viewer-formatt/chaeijjekipecdajnijdldjjipaegdjc?hl=en-US)
     1. Chrome
     2. Edge
+- Download this extension [JSON VIWER](https://chrome.google.com/webstore/detail/djson-json-viewer-formatt/chaeijjekipecdajnijdldjjipaegdjc?hl=en-US)
