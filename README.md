@@ -14,7 +14,7 @@
 
 ### I SUGGEST DO NOT USE THE REST CLIENT EXTENSION IN THE VS CODE
 
-- If you want an UI go to this link [ClickMe](http://localhost:3000/homepage)
+- If you want a UI go to this link [ClickMe](http://localhost:3000/homepage)
 - Use [POSTMAN](https://www.postman.com) to execute these http request and responses.
     * **GET** *http://localhost:3000/routes*
         > This will only request and respond with the JSON file.
