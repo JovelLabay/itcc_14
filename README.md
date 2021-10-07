@@ -14,10 +14,11 @@
 
 ### I SUGGEST DO NOT USE THE REST CLIENT EXTENSION IN THE VS CODE
 
+- If you want an UI go to this link [ClickMe](http://localhost:3000/homepage)
 - Use [POSTMAN](https://www.postman.com) to execute these http request and responses.
-    * **GET** *http://localhost/3000/routes*
+    * **GET** *http://localhost:3000/routes*
         > This will only request and respond with the JSON file.
-    * **POST** *http://localhost/3000/routes*
+    * **POST** *http://localhost:3000/routes*
         ```
             {
                 "id": 01,
@@ -29,7 +30,7 @@
             }
         ```
         > This will request to create and respond with a new book details.
-    * **PUT** *http://localhost/3000/routes/:id*
+    * **PUT** *http://localhost:3000/routes/:id*
         ```
             {
                 "bookName": "The Sample Book",
@@ -37,7 +38,7 @@
             }
         ```
         > This will request to alter/edit the selected book ID and respond with the edited book details.
-    * **DELETE** *http://localhost/3000/routes/:id*
+    * **DELETE** *http://localhost:3000/routes/:id*
         > This will request to edit the selected book ID.
 
 ### I SUGGEST ALSO TO USE JSON PARSE THAT FORMATS THE JSON FILE
