@@ -24,11 +24,16 @@
                 au"thor: "Juan Luna",
                 "publisher": "Xavier University",
                 "isbn": 11111,
-                > FORMAT OF THE DATE: MM. DD, YYYY
-                "datePublish": "Feb. 13, 1986"
+                "datePublish": "MM DD YYYY"
             }
         ```
     * **PUT** http://localhost/3000/routes/:id
+        ```
+            {
+                "bookName": "The Sample Book",
+                "publisher": "Xavier University",
+            }
+        ```
     * **DELET** http://localhost/3000/routes/:id
 
 ### I SUGGEST ALSO TO USE JSON PARSE THAT FORMATS THE JSON FILE
