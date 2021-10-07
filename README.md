@@ -15,8 +15,8 @@
 ### I SUGGEST DO NOT USE THE REST CLIENT EXTENSION IN THE VS CODE
 
 - Use [POSTMAN](https://www.postman.com) to execute these http request and responses.
-    * **GET** http://localhost/3000/routes
-    * **POST** http://localhost/3000/routes
+    * **GET** *http://localhost/3000/routes*
+    * **POST** *http://localhost/3000/routes*
         ```
             {
                 "id": 01,
@@ -27,14 +27,14 @@
                 "datePublish": "MM DD YYYY"
             }
         ```
-    * **PUT** http://localhost/3000/routes/:id
+    * **PUT** *http://localhost/3000/routes/:id*
         ```
             {
                 "bookName": "The Sample Book",
                 "publisher": "Xavier University",
             }
         ```
-    * **DELET** http://localhost/3000/routes/:id
+    * **DELET** *http://localhost/3000/routes/:id*
 
 ### I SUGGEST ALSO TO USE JSON PARSE THAT FORMATS THE JSON FILE
 
