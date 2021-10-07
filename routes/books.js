@@ -42,6 +42,8 @@ router.post('/', (req, res) => {
     // INSTEAD OF TO RETURN JSON WE WILL REDIRECT BACK TO THE FORM
     // res.json(books)
     res.redirect('/prempage')
+    res.send(console.log('Successfully Created'))
+    
 })
 
 // PUT BOOK
