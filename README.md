@@ -15,3 +15,10 @@
 ### I SUGGEST DO NOT USE THE REST CLIENT EXTENSION IN THE VS CODE
 
 - Use [POSTMAN](https://www.postman.com) to execute these http request and responses.
+
+### I SUGGEST ALSO TO USE JSON PARSE THAT FORMATS THE JSON FILE
+
+- Preferred browser to use are browsers that uses V8 javascript engine:
+- Download this extension [JSON VIWER](https://chrome.google.com/webstore/detail/djson-json-viewer-formatt/chaeijjekipecdajnijdldjjipaegdjc?hl=en-US)
+    1. Chrome
+    2. Edge
