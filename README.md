@@ -1,6 +1,6 @@
 # THESE ARE THE INSTRUCTIONS YOU NEED TO FOLLOW IN ORDER TO RUN IT IN YOUR LOCAL COMPUTER
 
-### INSTALLATION
+## INSTALLATION
 
 1. Open cmd and type `node -v` | This is to check if you have node in your computer installed.
 2. Type `npm init` to initialize the package.
