@@ -15,7 +15,7 @@
             </div>
             <div class="col">
                 <div class="p-4 bg-dark rounded-pill text-center">
-                    <a id="paid" class="text-decoration-none text-light" rel="noopener noreferrer"
+                    <a id="opener" class="text-decoration-none text-light" rel="noopener noreferrer"
                         style="cursor: pointer;">
                         <h5>Go <span class="bg-warning p-2 px-4 rounded-pill">Premium</span></h5>
                     </a>
@@ -26,19 +26,37 @@
     </div>
 </div>
 
+<div id="dialog" title="Password" class="text-center">
+    <input id="password" type="password" placeholder="password">
+    <button id="verify" class="btn btn-primary my-2">Verify</button>
+</div>
+
 {{!-- CUSTOME JAVASCRIPT --}}
 <script>
-    document.getElementById('paid').addEventListener('click', payme)
-
-    function payme() {
-        const password = 'itcc_14'
-        const inputPassword = prompt('What is your personal key: ')
-        if (password != inputPassword) {
-            alert('Incorrect Password')
-        } else {
-            alert('Correct password')
-            $('#goNow').slideDown('slow', function() {})
+    $("#dialog").dialog({
+        autoOpen: false,
+        show: {
+            effect: "explode",
+            duration: 1000
+        },
+        hide: {
+            effect: "explode",
+            duration: 1000
         }
-    }
+    });
+
+    $("#opener").click(function () {
+        $("#dialog").dialog("open");
+    });
+
+    document.getElementById('verify').addEventListener('click', () => {
+        let pass = document.getElementById('password').value
+        let thePass = 'itcc_14'
+        pass === thePass ? ($('#goNow').slideDown('slow', () => {
+            ($('#dialog').hide('fast', () => {
+                $( this ).prev().hide( "slow", arguments.callee );
+            }))
+        })) : (alert("Try Again"), document.getElementById('password').value = '')
+    })
 
 </script>
