@@ -6,15 +6,15 @@ const books = require('./books')
 const app = express()
 
 // HANDLEBARS HTML
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main'
-}));
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main2'
-}));
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main3'
-}));
+// app.engine('handlebars', exphbs({
+//     defaultLayout: 'main'
+// }));
+// app.engine('handlebars', exphbs({
+//     defaultLayout: 'main2'
+// }));
+// app.engine('handlebars', exphbs({
+//     defaultLayout: 'main3'
+// }));
 
 app.set('view engine', 'handlebars');
 
@@ -26,10 +26,31 @@ app.use(express.urlencoded({
 
 // RENDER HANDLEBARS IN HTML
 // THIS IS FOR THE HOMEPAGE
-app.get('/homepage', (req, res) => res.render('index', {
-    tab: 'HOMEPAGE | BOOKS',
-    title: 'Hey there! Look for a book?'
-}));
+// app.get('/homepage', (req, res) => res.render('index', {
+//     tab: 'HOMEPAGE | BOOKS',
+//     title: 'Hey there! Look for a book?'
+// }));
+const errme = {
+    nomo: 'INTERNAL ERROR, WE WILL FIX IT SOON. STAY CALM',
+    mama: 'Our team is working on this issue',
+    numbum: 500
+}
+app.get('/homepage', (req, res) => {
+    try {
+        res.render('index', {
+            tab: 'HOMEPAGE | BOOKS'
+        })
+    } catch (error) {
+        res.status(500).send(`
+            <div style="text-align: center; margin-top: 10%; background: black; color: white;">
+                <h1 style="font-size: 10rem;">"${errme.numbum}"</h1>
+                <p>${errme.nomo}</p>
+                <h4>${errme.mama}</h4>
+                <a href='https://www.google.com/' target="_blank" rel="noopener noreferrer" style="background: red; padding: 1rem;">Troubleshoot</a>
+            </div>
+        `)
+    }
+});
 
 const booktile = {
     bname: 'Book Name',
