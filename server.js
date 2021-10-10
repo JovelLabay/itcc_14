@@ -21,10 +21,11 @@ app.use(express.urlencoded({
     extended: false
 }))
 
-const errme = {
-    nomo: 'INTERNAL ERROR, WE WILL FIX IT SOON. STAY CALM',
-    mama: 'Our team is working on this issue',
-    numbum: 500
+const theError = {
+    theDescription: 'Cannot Access the web service!',
+    theNumber: 500,
+    theTeam: 'The team is under investigation of the current issue.',
+    theAccounce: 'For more information go to'
 }
 app.get('/homepage', (req, res) => {
     try {
@@ -34,11 +35,13 @@ app.get('/homepage', (req, res) => {
         })
     } catch (error) {
         res.status(500).send(`
-            <div style="text-align: center; margin-top: 10%; background: black; color: white;">
-                <h1 style="font-size: 10rem;">"${errme.numbum}"</h1>
-                <p>${errme.nomo}</p>
-                <h4>${errme.mama}</h4>
-                <a href='https://www.google.com/' target="_blank" rel="noopener noreferrer" style="background: red; padding: 1rem;">Troubleshoot</a>
+            <div style="text-align: center;">
+                <h6 style="font-size: 50px;">${theError.theDescription}</h6>
+                <h1 style="font-size: 100px;">:(${theError.theNumber}</h1>
+                    <div style='border: 2px solid red; margin: 0 20rem;'>
+                        <p>${theError.theTeam}</p>
+                        <samp>${theError.theAccounce} <a href='https//www/google.com'>Google</a></samp>
+                    </div>
             </div>
         `)
     }
