@@ -2,6 +2,7 @@
 const express = require('express')
 const exphbs = require('express-handlebars')
 const books = require('./books')
+const path = require('path')
 
 const app = express()
 
@@ -9,14 +10,10 @@ const app = express()
 app.engine('handlebars', exphbs({
     defaultLayout: 'main'
 }));
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main2'
-}));
-app.engine('handlebars', exphbs({
-    defaultLayout: 'main3'
-}));
-
 app.set('view engine', 'handlebars');
+
+// SET STATIC FOLDER FOR CSS
+app.use(express.static(path.join(__dirname, '/styles')))
 
 // BODY MIDDLEWARE THAT RETURN THE OUTPUT FROM THE REQ VERBS
 app.use(express.json())
@@ -24,12 +21,6 @@ app.use(express.urlencoded({
     extended: false
 }))
 
-// RENDER HANDLEBARS IN HTML
-// THIS IS FOR THE HOMEPAGE
-// app.get('/homepage', (req, res) => res.render('index', {
-//     tab: 'HOMEPAGE | BOOKS',
-//     title: 'Hey there! Look for a book?'
-// }));
 const errme = {
     nomo: 'INTERNAL ERROR, WE WILL FIX IT SOON. STAY CALM',
     mama: 'Our team is working on this issue',
@@ -38,7 +29,8 @@ const errme = {
 app.get('/homepage', (req, res) => {
     try {
         res.render('index', {
-            tab: 'HOMEPAGE | BOOKS'
+            tab: 'HOMEPAGE | BOOKS',
+            title: 'Hey there! Look for a book?'
         })
     } catch (error) {
         res.status(500).send(`
@@ -61,14 +53,14 @@ const booktile = {
 }
 
 app.get('/freepage', (req, res) => res.render('index2', {
-    tab: 'FREEPAGE | BOOKS',
-    titleLogo: 'This is the public API',
-    learn: 'Since, this is a public API. You can only view the book table',
+    layouts: 'main',
     books,
     booktile,
+    tab: "FREEPAGE | BOOKS"
 }));
 
 app.get('/prempage', (req, res) => res.render('index3', {
+    layouts: 'main',
     tab: 'PREMIUMPAGE | BOOKS',
     titleLogo: 'This is the premium API',
     learn: 'Since, this is a premium API. You have all the access of the API.',

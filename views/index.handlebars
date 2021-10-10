@@ -17,9 +17,9 @@
                 <div class="p-4 bg-dark rounded-pill text-center">
                     <a id="opener" class="text-decoration-none text-light" rel="noopener noreferrer"
                         style="cursor: pointer;">
-                        <h5>Go <span class="bg-warning p-2 px-4 rounded-pill">Premium</span></h5>
+                        <h5>Go <span id="nana" class="bg-warning p-2 px-4 rounded-pill">Premium</span></h5>
+                        <a id="goNow" class="bg-warning p-2 px-4 rounded-pill" href="/prempage" rel="noopener noreferrer" style="display: none; text-decoration: none; color:#fff;">Go Now</a>
                     </a>
-                    <a id="goNow" href="/prempage" rel="noopener noreferrer" style="display: none;">Go Now</a>
                 </div>
             </div>
         </div>
@@ -54,8 +54,9 @@
         let thePass = 'itcc_14'
         pass === thePass ? ($('#goNow').slideDown('slow', () => {
             ($('#dialog').hide('fast', () => {
-                $( this ).prev().hide( "slow", arguments.callee );
-            }))
+                $( this ).prev().hide( "slow", arguments.callee ); 
+            }));
+            $( "#nana" ).hide( "slow" );
         })) : (alert("Try Again"), document.getElementById('password').value = '')
     })
 
