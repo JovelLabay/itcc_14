@@ -1,0 +1,342 @@
+{
+	"info": {
+		"_postman_id": "daf87666-9393-4800-becb-889aa2278463",
+		"name": "ITCC14_API | Library System",
+		"description": "# Overview\nWelcome to Library System REST API. This is an ITCC 14 final project that enable aspiring developers to create and build our own REST API using these tools and technologies.\n\n## What is Library System?\nIt is a public and private REST API that allows API consumers to access the data consisting the details of the book information. Using the these technologies will help consumers to request book information.\n\n## Use of these technologies?\n 1. Public APIs are APIs that has a `GET` only request. They can view and display only book information.\n 2. Private APIs are APIs that have `GET`, `POST`, `PUT` & `DELETE` requests. These consumer have administrative authorities to modify the array of stored book information.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "localhost:3000/routes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:3000/routes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"routes"
+					]
+				},
+				"description": "### GET REQUEST\n\n> This is to view all the existing book details.\n> The consumers also has the capacity to view selected book information if the consumer wanted to."
+			},
+			"response": [
+				{
+					"name": "localhost:3000/routes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:3000/routes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"routes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "267"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-imPU/b6WslCHUVZR3dZKeY2Uy18\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Oct 2021 01:37:55 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"bookName\": \"The Sample Book\",\n        \"author\": \"Juan Luna\",\n        \"publisher\": \"Xavier University\",\n        \"isbn\": 11111,\n        \"datePublish\": \"Feb. 13, 1986\"\n    },\n    {\n        \"id\": 2,\n        \"bookName\": \"The Posidon\",\n        \"author\": \"Juan Antonio\",\n        \"publisher\": \"Liceo University\",\n        \"isbn\": 11112,\n        \"datePublish\": \"Dec. 28, 2000\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "localhost:3000/routes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"bookName\": \"Amego\",\r\n    \"author\": \"Juan Punci\",\r\n    \"publisher\": \"Meriam Books\",\r\n    \"isbn\": 11113,\r\n    \"datePublish\": \"Mar. 30, 9074\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/routes",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"routes"
+					]
+				},
+				"description": "### POST REQUEST\n\n> This is a `POST` request of the REST API. To store a new set of book information\n> It allows the user to **CREATE** a new book information in accordance with the requirement of the API format."
+			},
+			"response": [
+				{
+					"name": "localhost:3000/routes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id\": 1,\r\n    \"bookName\": \"Amego\",\r\n    \"author\": \"Juan Punci\",\r\n    \"publisher\": \"Meriam Books\",\r\n    \"isbn\": 11113,\r\n    \"datePublish\": \"Mar. 30, 9074\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/routes",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"routes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7337"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1ca9-CCn6k5lzlwjUELqwc2794F7j430\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Oct 2021 01:54:50 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "<!DOCTYPE html>\n<html lang=\"en\">\n    <head>\n        <meta charset=\"UTF-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">\n        <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\r\n        integrity=\"sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU\" crossorigin=\"anonymous\">\n        <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js\"\r\n        integrity=\"sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ\" crossorigin=\"anonymous\">\r\n    </script>\n        <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js\"></script>\n        <link rel=\"stylesheet\" href=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css\">\n        <script src=\"https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js\"></script>\n        <title>PREMIUMPAGE | BOOKS</title>\n    </head>\n    <body>\n        <div class=\"container\">\n            <div class=\"prem-contents\">\n                <div class=\"return m-4\">\n                    <a style=\"cursor: pointer;\" class=\"text-decoration-none link-warning border border-3 rounded-pill px-3 py-1 hawana\">Logout</a>\n                </div>\n                <div class=\"prem-title-logo my-5 text-center\">\n                    <h4 class=\"\">This is the premium API</h4>\n                </div>\n                <div class=\"the-prem-main-contents\">\n                    <div class=\"guide border-5 bg-secondary rounded mx-5 overflow-auto px-5 py-3\" style=\"height: 350px;\">\n                        <div class=\"instructions\">\n                            <h3>This is the premium API</h3>\n                        </div>\n                        <div class=\"details\">\n                            <ul>\n                                <li>This account has all the accesibility</li>\n                                <li>CREATE</li>\n                                <li>READ</li>\n                                <li>UPDATE</li>\n                                <li>DELETE</li>\n                                <li>Before you can direct in this page the homepage requires you to pass a password firt</li>\n                                <li>Sample text</li>\n                                <li>Hidden text</li>\n                                <li>Displayed text</li>\n                                <li>Displayed text</li>\n                                <li>Displayed text</li>\n                            </ul>\n                        </div>\n                        <div class=\"learning text-center\">\n                            <samp class=\"bg-warning rounded py-2 px-5\">Since, this is a premium API. You have all the access of the API.</samp>\n                        </div>\n                    </div>\n                    <div class=\"optionation my-5 mx-5\">\n                        <div class=\"row gx-3\">\n                            <div class=\"col-md-3\" style=\"cursor: pointer;\">\n                                <div class=\"p-3 border bg-primary text-center link-dark\">\n                                    <h6 id=\"opener\">CREATE</h6>\n                                </div>\n                            </div>\n                            <div class=\"col-md-3\" style=\"cursor: pointer;\">\n                                <div class=\"p-3 border bg-info text-center\">\n                                    <h6 id=\"opener2\">SEARCH BOOK</h6>\n                                </div>\n                            </div>\n                            <div class=\"col-md-3\" style=\"cursor: pointer;\">\n                                <div class=\"p-3 border bg-danger text-center\">\n                                    <h6 onclick=\"deletion()\">DELETE BOOK</h6>\n                                </div>\n                            </div>\n                            <div class=\"col-md-3\" style=\"cursor: pointer;\">\n                                <div class=\"p-3 border bg-success text-center\">\n                                    <h6 id=\"videJ2\">VIEW JSON</h6>\n                                </div>\n                            </div>\n                        </div>\n                    </div>\n                </div>\n            </div>\n            <div id=\"dialog\" title=\"CREATE\">\n                <form action=\"/routes\" method=\"POST\" class=\"mb-4\">\n                    <div class=\"form-group\">\n                        <label for=\"bookName\" class=\"book\">Book Name</label>\n                        <input type=\"text\" name=\"bookName\" class=\"form-control\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"publisher\">Publisher</label>\n                        <input type=\"text\" name=\"publisher\" class=\"form-control\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"publisher\">Author</label>\n                        <input type=\"text\" name=\"author\" class=\"form-control\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"isbn\">Book ISBN</label>\n                        <input required type=\"number\" name=\"isbn\" class=\"form-control\" />\n                    </div>\n                    <div class=\"form-group\">\n                        <label for=\"datePublisher\">Book Published</label>\n                        <input type=\"text\" name=\"datePublish\" class=\"form-control\" />\n                    </div>\n                    <div class=\"text-center\">\n                        <input class=\"btn btn-primary m-2 \" type=\"submit\" value=\"Add Book\" />\n                    </div>\n                </form>\n            </div>\n            <div id=\"dialog2\" title=\"SEARCH BOOK\" class=\"text-center\">\n                <input id=\"numbering\" type=\"number\" placeholder=\"ISBN | 1-99 DIGITS\" class=\"my-2\">\n                <button onclick=\"hello()\" class=\"btn btn-primary my-2\">Search</button>\n            </div>\n            <div id=\"hawa\" title=\"Confirmation\" class=\"text-center\">\n                <h5>Are you sure?</h5>\n                <div>\n                    <button id=\"yes\" class=\"btn btn-success\">Yes</button>\n                    <button id=\"no\" class=\"btn btn-danger\">No</button>\n                </div>\n            </div>\n            <script>\r\n    $(\"#dialog\").dialog({\r\n        autoOpen: false,\r\n        show: {\r\n            effect: \"explode\",\r\n            duration: 1000\r\n        },\r\n        hide: {\r\n            effect: \"explode\",\r\n            duration: 1000\r\n        }\r\n    });\r\n    \r\n    $(\"#opener\").click(function () {\r\n        $(\"#dialog\").dialog(\"open\");\r\n    });\r\n\r\n    document.getElementById('videJ2').addEventListener('click', viewJ2)\r\n    function viewJ2() {\r\n        window.open(\"/routes\", \"_blank\",\r\n            \"toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=500,height=650\");\r\n    }\r\n\r\n    $(\"#dialog2\").dialog({\r\n        autoOpen: false,\r\n        show: {\r\n            effect: \"bounce\",\r\n            duration: 1000\r\n        },\r\n        hide: {\r\n            effect: \"bounce\",\r\n            duration: 1000\r\n        }\r\n    });\r\n    $(\"#opener2\").click(function () {\r\n        $(\"#dialog2\").dialog(\"open\");\r\n    });\r\n\r\n    function hello() {\r\n        let n = document.getElementById('numbering').value\r\n        window.open(`/routes/${n}`, \"_blank\",\r\n            \"toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=500,height=650\");\r\n    }\r\n\r\n    function deletion() {\r\n        let n = document.getElementById('numbering').value\r\n        window.open('https://web.postman.co/workspace/My-Workspace~f99c63f1-b0d3-4d4a-85ba-7550e2db153b', \"_blank\",\r\n            \"toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=100,width=1300,height=650\");\r\n    }\r\n\r\n    $(\"#hawa\").dialog({\r\n        autoOpen: false,\r\n        show: {\r\n            effect: \"pulsate\",\r\n            duration: 1000\r\n        },\r\n        hide: {\r\n            effect: \"explode\",\r\n            duration: 1000\r\n        }\r\n    });\r\n\r\n    $(\".hawana\").click(function () {\r\n        $(\"#hawa\").dialog(\"open\");\r\n    });\r\n\r\n    document.getElementById('no').addEventListener('click', () => $('#hawa').hide())\r\n    document.getElementById('yes').addEventListener('click', () => {\r\n        var url = '/homepage';\r\n        $(location).prop('href', url);\r\n    })\r\n\r\n</script>\n        </div>\n    </body>\n</html>"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/routes/1",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"bookName\": \"sdfsdfgdfgdfgdfdfsdf\",\r\n    \"publisher\": \"3453453453gdfgdfgdfgdfgdfg45\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/routes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"routes",
+						"1"
+					]
+				},
+				"description": "### PUT REQUEST\n> This is to edit the selected book and alter the information.\n> Using the `PUT` request the consumer can alter or edit the existing book information."
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/routes/1",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"bookName\": \"sdfsdfgdfgdfgdfdfsdf\",\r\n    \"publisher\": \"3453453453gdfgdfgdfgdfgdfg45\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/routes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"routes",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "html",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/html; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-oijqyjLAeajrxGWXHP0m2NR/2rY\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Oct 2021 01:59:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "BOOK DETAILS HAS BEEN UPDATED"
+				}
+			]
+		},
+		{
+			"name": "http://localhost:3000/routes/1",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/routes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"routes",
+						"1"
+					]
+				},
+				"description": "### DELETE REQUEST\n\n> This is to delete the selected book information.\n> By using the `DELETE` request to delete book."
+			},
+			"response": [
+				{
+					"name": "http://localhost:3000/routes/1",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/routes/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"routes",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "404"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"194-VXAs1ZDVdwC9hKE6Mlu6cuJSn3I\""
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 10 Oct 2021 02:00:45 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"messsgae\": \"DELETED\",\n    \"books\": [\n        {\n            \"id\": 2,\n            \"bookName\": \"The Posidon\",\n            \"author\": \"Juan Antonio\",\n            \"publisher\": \"Liceo University\",\n            \"isbn\": 11112,\n            \"datePublish\": \"Dec. 28, 2000\"\n        },\n        {\n            \"id\": 3,\n            \"bookName\": \"Amego\",\n            \"author\": \"Juan Punci\",\n            \"publisher\": \"Meriam Books\",\n            \"isbn\": 11113,\n            \"datePublish\": \"Mar. 30, 9074\"\n        },\n        {\n            \"id\": 4,\n            \"bookName\": \"Amego\",\n            \"author\": \"Juan Punci\",\n            \"publisher\": \"Meriam Books\",\n            \"isbn\": 11113,\n            \"datePublish\": \"Mar. 30, 9074\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}

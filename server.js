@@ -6,15 +6,15 @@ const books = require('./books')
 const app = express()
 
 // HANDLEBARS HTML
-// app.engine('handlebars', exphbs({
-//     defaultLayout: 'main'
-// }));
-// app.engine('handlebars', exphbs({
-//     defaultLayout: 'main2'
-// }));
-// app.engine('handlebars', exphbs({
-//     defaultLayout: 'main3'
-// }));
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main'
+}));
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main2'
+}));
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main3'
+}));
 
 app.set('view engine', 'handlebars');
 
