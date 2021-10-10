@@ -1,24 +1,29 @@
-<div class="the-contents" >
+<div class="the-contents">
     <div class="title-logo text-center my-5">
+        <div class="logsohandler">
+            <img src="https://i.postimg.cc/bvV30WP4/BWlogo.png" alt="Girl in a jacket" width="auto" height="100px">
+        </div>
         <div class="title">
             <h3 id="title">{{title}}</h3>
         </div>
     </div>
     <div class="the-content">
-        <div class="row gx-5 bg-warning rounded my-5 py-5">
-            <div class="col">
+        <div class="row gx-5 my-5 py-5" id="buttonbox">
+            <div class="col" id="buttonfree">
                 <div class="p-4 bg-dark rounded-pill text-center">
                     <a class="text-decoration-none text-light" href="/freepage" rel="noopener noreferrer">
                         <h5>Go <span class="bg-warning p-2 px-4 rounded-pill">Public</span></h5>
                     </a>
                 </div>
             </div>
-            <div class="col">
+            <div class="col" id="buttonprem">
                 <div class="p-4 bg-dark rounded-pill text-center">
                     <a id="opener" class="text-decoration-none text-light" rel="noopener noreferrer"
                         style="cursor: pointer;">
                         <h5>Go <span id="nana" class="bg-warning p-2 px-4 rounded-pill">Premium</span></h5>
-                        <a id="goNow" class="bg-warning p-2 px-4 rounded-pill" href="/prempage" rel="noopener noreferrer" style="display: none; text-decoration: none; color:#fff;">Go Now</a>
+                        <a id="goNow" class="bg-warning p-2 px-4 rounded-pill" href="/prempage"
+                            rel="noopener noreferrer" style="display: none; text-decoration: none; color:#fff;">Go
+                            Now</a>
                     </a>
                 </div>
             </div>
@@ -54,9 +59,9 @@
         let thePass = 'itcc_14'
         pass === thePass ? ($('#goNow').slideDown('slow', () => {
             ($('#dialog').hide('fast', () => {
-                $( this ).prev().hide( "slow", arguments.callee ); 
+                $(this).prev().hide("slow", arguments.callee);
             }));
-            $( "#nana" ).hide( "slow" );
+            $("#nana").hide("slow");
         })) : (alert("Try Again"), document.getElementById('password').value = '')
     })
 

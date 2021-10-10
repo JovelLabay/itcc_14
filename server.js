@@ -3,7 +3,6 @@ const express = require('express')
 const exphbs = require('express-handlebars')
 const books = require('./books')
 const path = require('path')
-
 const app = express()
 
 // HANDLEBARS HTML
@@ -21,6 +20,7 @@ app.use(express.urlencoded({
     extended: false
 }))
 
+// FOR THE ERROR
 const theError = {
     theDescription: 'Cannot Access the web service!',
     theNumber: 500,

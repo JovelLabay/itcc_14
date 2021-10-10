@@ -1,4 +1,4 @@
-const books = [{
+var books = [{
         // THE FORMAT OF THE JSON FILE AND NAMING
         id: 01,
         bookName: "The Sample Book",

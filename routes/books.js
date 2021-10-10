@@ -7,8 +7,8 @@ router.get('/', (req, res) => {
     try {
         res.send(books)
     } catch (err) {
-        res.status(400).json({
-            errorMessage: "404 Error"
+        res.status(404).json({
+            errorMessage: "404 | NOT FOUND"
         })
     }
 })
@@ -18,7 +18,16 @@ router.get('/:id', (req, res) => {
     if (books.some(books => books.id === parseInt(req.params.id))) {
         res.json(books.filter(books => books.id === parseInt(req.params.id)))
     } else {
-        res.status(417).send(`THAT IS NOT EXISTING ${req.params.id}`)
+        res.status(404).send(`
+            <div style="text-align: center;">
+                <h6>OUT OF BOUNCE</h6>
+                <h1>:( We are so sorry not to display books that do not exist</h1>
+                    <div>
+                        <samp>This Book do not exit "${req.params.id}"</samp>
+                    </div>
+            </div>
+        `)
+        // res.status(417).send(`THAT IS NOT EXISTING ${req.params.id}`)
     }
 })
 
@@ -43,7 +52,7 @@ router.post('/', (req, res) => {
     // res.json(books)
     res.redirect('/prempage')
     res.send(console.log('Successfully Created'))
-    
+
 })
 
 // PUT BOOK
@@ -59,7 +68,15 @@ router.put('/:id', (req, res) => {
             }
         });
     } else {
-        res.status(417).send(`THAT IS NOT EXISTING ${req.params.id}`)
+        res.status(404).send(`
+            <div style="text-align: center;">
+                <h6>OUT OF BOUNCE</h6>
+                <h1>:( We are so sorry not to display books that do not exist</h1>
+                    <div>
+                        <samp>This Book do not exit "${req.params.id}"</samp>
+                    </div>
+            </div>
+        `)
     }
 })
 
@@ -71,7 +88,15 @@ router.delete('/:id', (req, res) => {
             books: books.filter(books => books.id !== parseInt(req.params.id))
         });
     } else {
-        res.status(417).send(`THAT IS NOT EXISTING ${req.params.id}`)
+        res.status(404).send(`
+            <div style="text-align: center;">
+                <h6>OUT OF BOUNCE</h6>
+                <h1>:( We are so sorry not to display books that do not exist</h1>
+                    <div>
+                        <samp>This Book do not exit "${req.params.id}"</samp>
+                    </div>
+            </div>
+        `)
     }
 })
 
