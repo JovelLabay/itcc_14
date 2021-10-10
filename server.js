@@ -59,6 +59,7 @@ app.get('/freepage', (req, res) => res.render('index2', {
     layouts: 'main',
     books,
     booktile,
+    kulira: "Since, this a free API. you can only view either the table and JSON format.",
     tab: "FREEPAGE | BOOKS"
 }));
 
