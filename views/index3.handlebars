@@ -1,6 +1,9 @@
 <div class="prem-contents">
-    <div class="return m-4">
-        <a style="cursor: pointer;" class="text-decoration-none link-warning border border-3 rounded-pill px-3 py-1 hawana">Logout</a>
+    <div class="return m-4" style="display: flex; justify-content:space-between">
+        <a style="cursor: pointer;"
+            class="text-decoration-none link-warning border border-3 rounded-pill px-3 py-1 hawana">Logout</a>
+        <a style="cursor: pointer;"
+            class="text-decoration-none link-warning border border-3 rounded-pill px-3 py-1 hawana2">View Me</a>
     </div>
     <div class="prem-title-logo my-5 text-center">
         <h4 class="">{{titleLogo}}</h4>
@@ -97,24 +100,42 @@
     </div>
 </div>
 
+<div id="hawa2" title="Confirmation" class="text-center">
+    <div class="container my-2 bg-success" style="height: 300px; overflow-y:auto">
+        <div class="row gx-5 ">
+            {{#each books}}
+            <div class="col-md-4 my-2">
+                <div class="p-3 border bg-light">
+                    <h4>{{this.bookName}}</h4>
+                    <p>{{this.author}}</p>
+                    <samp>{{this.publisher}}</samp>
+                    <p>{{this.datePublish}}</p>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
 <script>
     $("#dialog").dialog({
         autoOpen: false,
         show: {
             effect: "fold",
-            duration: 1000
+            duration: 1000,
         },
         hide: {
             effect: "explode",
             duration: 1000
         }
     });
-    
+
     $("#opener").click(function () {
         $("#dialog").dialog("open");
     });
 
     document.getElementById('videJ2').addEventListener('click', viewJ2)
+
     function viewJ2() {
         window.open("/routes", "_blank",
             "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=500,width=500,height=650");
@@ -143,7 +164,9 @@
 
     function deletion() {
         let n = document.getElementById('numbering').value
-        window.open('https://universal-flare-45474.postman.co/workspace/My-Workspace~f99c63f1-b0d3-4d4a-85ba-7550e2db153b/request/17576451-73df820f-c685-4edc-a169-293b50b86fc1', "_blank",
+        window.open(
+            'https://universal-flare-45474.postman.co/workspace/My-Workspace~f99c63f1-b0d3-4d4a-85ba-7550e2db153b/request/17576451-73df820f-c685-4edc-a169-293b50b86fc1',
+            "_blank",
             "toolbar=yes,scrollbars=yes,resizable=yes,top=50,left=100,width=1300,height=650");
     }
 
@@ -163,9 +186,27 @@
         $("#hawa").dialog("open");
     });
 
+    $("#hawa2").dialog({
+        autoOpen: false,
+        width: 800,
+        show: {
+            effect: "pulsate",
+            duration: 1000
+        },
+        hide: {
+            effect: "explode",
+            duration: 1000
+        }
+    });
+
+    $(".hawana2").click(function () {
+        $("#hawa2").dialog("open");
+    });
+
     document.getElementById('no').addEventListener('click', () => $('#hawa').hide())
     document.getElementById('yes').addEventListener('click', () => {
         var url = '/';
         $(location).prop('href', url);
     })
+
 </script>
