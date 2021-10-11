@@ -27,7 +27,7 @@ const theError = {
     theTeam: 'The team is under investigation of the current issue.',
     theAccounce: 'For more information go to'
 }
-app.get('/homepage', (req, res) => {
+app.get('/', (req, res) => {
     try {
         res.render('index', {
             tab: 'HOMEPAGE | BOOKS',
